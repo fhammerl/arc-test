@@ -21,6 +21,7 @@ jobs:
       matrix:
           version: [10, 12, 14]
           os: [ubuntu-latest, windows-latest]
+          notmatrix: [ubuntu-latest, windows-latest]
     runs-on: test-new-scale-set-2
 
     # Steps represent a sequence of tasks that will be executed as part of the job
