@@ -19,11 +19,11 @@ jobs:
   build:
     strategy:
       matrix:
-          version: [10, 12, 14, 16, 18, 21, 23, 324]
-          serious: [10, 12, 14, 16, 18, 21, 23, 324]
+          #version: [10, 12, 14, 16, 18, 21, 23, 324]
+          #serious: [10, 12, 14, 16, 18, 21, 23, 324]
           os: [ubuntu-latest, windows-latest]
-          notmatrix: [ubuntu-latest, windows-latest]
-    runs-on: test-new-scale-set-2
+          #notmatrix: [ubuntu-latest, windows-latest]
+    runs-on: scale3
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
