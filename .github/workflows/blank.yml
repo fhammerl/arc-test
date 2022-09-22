@@ -17,13 +17,13 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
-    strategy:
-      matrix:
-          #version: [10, 12, 14, 16, 18, 21, 23, 324]
-          #serious: [10, 12, 14, 16, 18, 21, 23, 324]
-          os: [ubuntu-latest, windows-latest]
+#    strategy:
+#      matrix:
+ #         #version: [10, 12, 14, 16, 18, 21, 23, 324]
+  #        #serious: [10, 12, 14, 16, 18, 21, 23, 324]
+   #       os: [ubuntu-latest, windows-latest]
           #notmatrix: [ubuntu-latest, windows-latest]
-    runs-on: scale3
+    runs-on: self-hosted
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -33,9 +33,3 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
