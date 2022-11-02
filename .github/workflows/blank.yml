@@ -1,33 +1,16 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
-
-# Controls when the workflow will run
 on:
   push:
   pull_request:
     branches: [ "main" ]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-#    strategy:
-#      matrix:
- #         #version: [10, 12, 14, 16, 18, 21, 23, 324]
-  #        #serious: [10, 12, 14, 16, 18, 21, 23, 324]
-   #       os: [ubuntu-latest, windows-latest]
-          #notmatrix: [ubuntu-latest, windows-latest]
+    strategy:
+      matrix:
+          version: [10, 12, 14, 32, 11]
+          os: [ubuntu-latest, windows-latest]
     runs-on: example-auto-scale-runner-set
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
